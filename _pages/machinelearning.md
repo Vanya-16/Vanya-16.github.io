@@ -7,6 +7,7 @@ header:
   image: "/images/fort point.png"
 ---
 
+{% include base_path %}
 
 {% for post in paginator.posts %}
   {% include archive-single.html %}
