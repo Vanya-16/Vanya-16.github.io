@@ -1,5 +1,5 @@
 ---
-title: "Machine Learning Project: Perceptron"
+title: "Data Wrangling Project"
 date: 2018-01-28
 tags: [data wrangling, data science, messy data]
 header:
