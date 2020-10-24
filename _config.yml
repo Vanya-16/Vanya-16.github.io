@@ -85,7 +85,7 @@ analytics:
 # Site Author
 author:
   name             : "Vanya Sahu"
-  avatar           : "/images/IMG-20200309-WA0033.jpg" # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
+  avatar           : "/images/tu_use.jpg" # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
   bio              : "Data Science Portfolio"
   location         : "Noida, Uttar Pradesh, India"
   email            :
