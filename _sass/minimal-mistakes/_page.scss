@@ -345,8 +345,8 @@
 
 .comment__avatar-wrapper {
   float: left;
-  width: 500px;
-  height: 500px;
+  width: 40px;
+  height: 40px;
 
   @include breakpoint($large) {
     width: 100px;
@@ -355,8 +355,8 @@
 }
 
 .comment__avatar {
-  width: 450px;
-  height: 450px;
+  width: 60px;
+  height: 60px;
   border-radius: 50%;
 
   @include breakpoint($large) {
