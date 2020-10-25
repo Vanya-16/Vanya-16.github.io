@@ -85,10 +85,10 @@ analytics:
 # Site Author
 author:
   name             : "Vanya Sahu"
-  avatar           : "/images/IMG-20200309-WA0033.jpg" # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
+  avatar           : "/images/To_use.jpg" # path of avatar image
   bio              : "Data Science Portfolio"
   location         : "Noida, Uttar Pradesh, India"
-  email            :
+  email            : "sahu.vanya@gmail.com"
   uri              :
   home             : # null (default), "absolute or relative url to link to author home"
   bitbucket        :
