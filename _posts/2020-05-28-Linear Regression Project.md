@@ -11,6 +11,8 @@ mathjax: "true"
 
 ### Objective: Given the customer data of a company, whether it should focus on their website or mobile app experience.
 Source: Python for Data Science and Machine Learning Bootcamp on Udemy
+Data used in the below project: [link](https://github.com/Vanya-16/DataSets/blob/master/Ecommerce%20Customers)
+
 
 
 ```python
@@ -353,9 +355,6 @@ plt.scatter(y_test,predictions)
 
 <img src="{{ site.url }}{{ site.baseurl }}/images/Linear_regression/Scatter_LinearReg.png" alt="Pair Plot">
 
-
-
-![png](Linear%20Regression%20Project_files/Linear%20Regression%20Project_19_1.png)
 
 
 *Model rendered seems like a good fit*
