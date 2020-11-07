@@ -8,22 +8,30 @@ excerpt: "Data Science, linear regression, matplotlib, seaborn"
 mathjax: "true"
 ---
 
+
+### Objective: Given the customer data of a company, whether it should focus on their website or mobile app experience.
+Source: Python for Data Science and Machine Learning Bootcamp on Udemy
+
+
 ```python
+#Import all the libraries for data analysis
 import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt
 import seaborn as sns
+#used to view plots within jupyter notebook
 %matplotlib inline
+sns.set_style("whitegrid") #setting view for plots, optional
 ```
 
 
 ```python
-customers = pd.read_csv('Ecommerce Customers')
+customers = pd.read_csv('Ecommerce Customers') #import dataset
 ```
 
 
 ```python
-customers.head()
+customers.head(2) #view dataset
 ```
 
 
@@ -80,39 +88,6 @@ customers.head()
       <td>2.664034</td>
       <td>392.204933</td>
     </tr>
-    <tr>
-      <th>2</th>
-      <td>pallen@yahoo.com</td>
-      <td>24645 Valerie Unions Suite 582\nCobbborough, D...</td>
-      <td>Bisque</td>
-      <td>33.000915</td>
-      <td>11.330278</td>
-      <td>37.110597</td>
-      <td>4.104543</td>
-      <td>487.547505</td>
-    </tr>
-    <tr>
-      <th>3</th>
-      <td>riverarebecca@gmail.com</td>
-      <td>1414 David Throughway\nPort Jason, OH 22070-1220</td>
-      <td>SaddleBrown</td>
-      <td>34.305557</td>
-      <td>13.717514</td>
-      <td>36.721283</td>
-      <td>3.120179</td>
-      <td>581.852344</td>
-    </tr>
-    <tr>
-      <th>4</th>
-      <td>mstephens@davidson-herman.com</td>
-      <td>14023 Rodriguez Passage\nPort Jacobville, PR 3...</td>
-      <td>MediumAquaMarine</td>
-      <td>33.330673</td>
-      <td>12.795189</td>
-      <td>37.536653</td>
-      <td>4.446308</td>
-      <td>599.406092</td>
-    </tr>
   </tbody>
 </table>
 </div>
@@ -121,6 +96,7 @@ customers.head()
 
 
 ```python
+#view some informormation of the dataset
 customers.describe()
 ```
 
@@ -247,39 +223,39 @@ customers.info()
 
 
 ```python
-sns.set_style("whitegrid")
-```
-
-
-```python
+#View numerics data in the dataset and the relationship with other columns
 sns.pairplot(data=customers)
 ```
 
 
 
 
-    <seaborn.axisgrid.PairGrid at 0x7fee434466a0>
+    <seaborn.axisgrid.PairGrid at 0x7fd1e54fa4f0>
 
 
 
+<img src="{{ site.url }}{{ site.baseurl }}/images/Linear_regression/Pairplot-LinearReg.png" alt="Pair Plot">
 
 ![png](Linear%20Regression%20Project_files/Linear%20Regression%20Project_6_1.png)
 
 
+*It seems Lenth of Membership is most correlated with Yearly Amount Spent*
+
 
 ```python
+#Playing aorund with the data to check for more correlations
 sns.jointplot(x='Time on Website',y='Yearly Amount Spent',data=customers)
 ```
 
 
 
 
-    <seaborn.axisgrid.JointGrid at 0x7fee4003f850>
+    <seaborn.axisgrid.JointGrid at 0x7fd1e44d68e0>
 
 
 
 
-![png](Linear%20Regression%20Project_files/Linear%20Regression%20Project_7_1.png)
+![png](Linear%20Regression%20Project_files/Linear%20Regression%20Project_8_1.png)
 
 
 
@@ -290,12 +266,12 @@ sns.jointplot(x='Time on App',y='Yearly Amount Spent',data=customers)
 
 
 
-    <seaborn.axisgrid.JointGrid at 0x7fee44913760>
+    <seaborn.axisgrid.JointGrid at 0x7fd1e6a45190>
 
 
 
 
-![png](Linear%20Regression%20Project_files/Linear%20Regression%20Project_8_1.png)
+![png](Linear%20Regression%20Project_files/Linear%20Regression%20Project_9_1.png)
 
 
 
@@ -306,23 +282,7 @@ sns.jointplot(x='Time on App',y='Length of Membership',data=customers,kind='hex'
 
 
 
-    <seaborn.axisgrid.JointGrid at 0x7fee44afd9d0>
-
-
-
-
-![png](Linear%20Regression%20Project_files/Linear%20Regression%20Project_9_1.png)
-
-
-
-```python
-sns.lmplot(x='Length of Membership',y='Yearly Amount Spent', data = customers)
-```
-
-
-
-
-    <seaborn.axisgrid.FacetGrid at 0x7fee437f7e20>
+    <seaborn.axisgrid.JointGrid at 0x7fd1e6e124c0>
 
 
 
@@ -332,6 +292,26 @@ sns.lmplot(x='Length of Membership',y='Yearly Amount Spent', data = customers)
 
 
 ```python
+#Can see the correlation clearly here
+sns.lmplot(x='Length of Membership',y='Yearly Amount Spent', data = customers)
+```
+
+
+
+
+    <seaborn.axisgrid.FacetGrid at 0x7fd1e44f2af0>
+
+
+
+
+![png](Linear%20Regression%20Project_files/Linear%20Regression%20Project_11_1.png)
+
+
+### Now we start training the model to predict Yearly Amount spent based on given information
+
+
+```python
+#view column names in the dataset
 customers.columns
 ```
 
@@ -346,26 +326,24 @@ customers.columns
 
 
 ```python
+#divide data into X and y DataFrames
 X = customers[['Avg. Session Length', 'Time on App',
        'Time on Website', 'Length of Membership']]
 y = customers['Yearly Amount Spent']
-
+#Split the X and y into Training and Test
 from sklearn.model_selection import train_test_split
 X_train,X_test, y_train,y_test =train_test_split(X, y, test_size=0.3, random_state=101)
 ```
 
 
 ```python
+#import Linear Regression model from Sci-kit Learn
 from sklearn.linear_model import LinearRegression
 ```
 
 
 ```python
 lm = LinearRegression()
-```
-
-
-```python
 lm.fit(X_train,y_train)
 ```
 
@@ -378,6 +356,7 @@ lm.fit(X_train,y_train)
 
 
 ```python
+#view coefficients, or amount of correlation among Yearly Amount spent and other data provided
 lm.coef_
 ```
 
@@ -390,67 +369,20 @@ lm.coef_
 
 
 ```python
-lm.predict(X_test)
-```
-
-
-
-
-    array([456.44186104, 402.72005312, 409.2531539 , 591.4310343 ,
-           590.01437275, 548.82396607, 577.59737969, 715.44428115,
-           473.7893446 , 545.9211364 , 337.8580314 , 500.38506697,
-           552.93478041, 409.6038964 , 765.52590754, 545.83973731,
-           693.25969124, 507.32416226, 573.10533175, 573.2076631 ,
-           397.44989709, 555.0985107 , 458.19868141, 482.66899911,
-           559.2655959 , 413.00946082, 532.25727408, 377.65464817,
-           535.0209653 , 447.80070905, 595.54339577, 667.14347072,
-           511.96042791, 573.30433971, 505.02260887, 565.30254655,
-           460.38785393, 449.74727868, 422.87193429, 456.55615271,
-           598.10493696, 449.64517443, 615.34948995, 511.88078685,
-           504.37568058, 515.95249276, 568.64597718, 551.61444684,
-           356.5552241 , 464.9759817 , 481.66007708, 534.2220025 ,
-           256.28674001, 505.30810714, 520.01844434, 315.0298707 ,
-           501.98080155, 387.03842642, 472.97419543, 432.8704675 ,
-           539.79082198, 590.03070739, 752.86997652, 558.27858232,
-           523.71988382, 431.77690078, 425.38411902, 518.75571466,
-           641.9667215 , 481.84855126, 549.69830187, 380.93738919,
-           555.18178277, 403.43054276, 472.52458887, 501.82927633,
-           473.5561656 , 456.76720365, 554.74980563, 702.96835044,
-           534.68884588, 619.18843136, 500.11974127, 559.43899225,
-           574.8730604 , 505.09183544, 529.9537559 , 479.20749452,
-           424.78407899, 452.20986599, 525.74178343, 556.60674724,
-           425.7142882 , 588.8473985 , 490.77053065, 562.56866231,
-           495.75782933, 445.17937217, 456.64011682, 537.98437395,
-           367.06451757, 421.12767301, 551.59651363, 528.26019754,
-           493.47639211, 495.28105313, 519.81827269, 461.15666582,
-           528.8711677 , 442.89818166, 543.20201646, 350.07871481,
-           401.49148567, 606.87291134, 577.04816561, 524.50431281,
-           554.11225704, 507.93347015, 505.35674292, 371.65146821,
-           342.37232987, 634.43998975, 523.46931378, 532.7831345 ,
-           574.59948331, 435.57455636, 599.92586678, 487.24017405,
-           457.66383406, 425.25959495, 331.81731213, 443.70458331,
-           563.47279005, 466.14764208, 463.51837671, 381.29445432,
-           411.88795623, 473.48087683, 573.31745784, 417.55430913,
-           543.50149858, 547.81091537, 547.62977348, 450.99057409,
-           561.50896321, 478.30076589, 484.41029555, 457.59099941,
-           411.52657592, 375.47900638])
-
-
-
-
-```python
+#predict the values on the test data
 predictions = lm.predict(X_test)
 ```
 
 
 ```python
+#plot the result alongwith the actual data
 plt.scatter(y_test,predictions)
 ```
 
 
 
 
-    <matplotlib.collections.PathCollection at 0x7fcceb522ee0>
+    <matplotlib.collections.PathCollection at 0x7fd1e6437940>
 
 
 
@@ -458,8 +390,11 @@ plt.scatter(y_test,predictions)
 ![png](Linear%20Regression%20Project_files/Linear%20Regression%20Project_19_1.png)
 
 
+*Model rendered seems like a good fit*
+
 
 ```python
+#import metrics to evaluate model performance
 from sklearn import metrics
 ```
 
@@ -477,27 +412,26 @@ print('RMSE:', np.sqrt(metrics.mean_squared_error(y_test, predictions)))
 
 
 ```python
+#plot the residual amount to check model performance
 sns.distplot(y_test-predictions,bins=30)
 ```
 
 
 
 
-    <matplotlib.axes._subplots.AxesSubplot at 0x7fcce6e62640>
+    <matplotlib.axes._subplots.AxesSubplot at 0x7fd1e7775490>
 
 
 
 
-![png](Linear%20Regression%20Project_files/Linear%20Regression%20Project_22_1.png)
+![png](Linear%20Regression%20Project_files/Linear%20Regression%20Project_23_1.png)
 
+
+*Check the correlation with coefficients seen before*
 
 
 ```python
 Coeff = pd.DataFrame(lm.coef_,X.columns,columns=['Coefficients'])
-```
-
-
-```python
 Coeff
 ```
 
@@ -548,7 +482,12 @@ Coeff
 
 
 
+*The above data signify that 1 change in Avg. Session Length will read to 25.98 change in Yearly Amount Spent.*  
+*Similarly, for Time on App, Time on Website and Length of Membership*  
+*As predicted before, the most impact if from Length of Membership*
 
-```python
-
-```
+### Result: The most correlated field is Length of Membership.  
+### However, we need to determine the focus of the company on ehancing the Website / App for users. This could be done depending on time and resources and the approach the company would like to take. Here are three options:  
+#### 1. Enhance Website as it doesn't help in the sales right now.  
+#### 2. Enhance App for even better performance.  
+#### 3. Look for other metrics as the most sales are coming in due to length of membership and neither from Website nor App.
