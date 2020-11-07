@@ -228,15 +228,8 @@ sns.pairplot(data=customers)
 ```
 
 
-
-
-    <seaborn.axisgrid.PairGrid at 0x7fd1e54fa4f0>
-
-
-
 <img src="{{ site.url }}{{ site.baseurl }}/images/Linear_regression/Pairplot-LinearReg.png" alt="Pair Plot">
 
-![png](Linear%20Regression%20Project_files/Linear%20Regression%20Project_6_1.png)
 
 
 *It seems Lenth of Membership is most correlated with Yearly Amount Spent*
@@ -249,29 +242,17 @@ sns.jointplot(x='Time on Website',y='Yearly Amount Spent',data=customers)
 
 
 
+<img src="{{ site.url }}{{ site.baseurl }}/images/Linear_regression/Jointgrid_LinearReg.png" alt="Pair Plot">
 
-    <seaborn.axisgrid.JointGrid at 0x7fd1e44d68e0>
-
-
-
-
-![png](Linear%20Regression%20Project_files/Linear%20Regression%20Project_8_1.png)
 
 
 
 ```python
 sns.jointplot(x='Time on App',y='Yearly Amount Spent',data=customers)
 ```
+<img src="{{ site.url }}{{ site.baseurl }}/images/Linear_regression/Jointgrid2_LinearReg.png" alt="Pair Plot">
 
 
-
-
-    <seaborn.axisgrid.JointGrid at 0x7fd1e6a45190>
-
-
-
-
-![png](Linear%20Regression%20Project_files/Linear%20Regression%20Project_9_1.png)
 
 
 
@@ -280,14 +261,7 @@ sns.jointplot(x='Time on App',y='Length of Membership',data=customers,kind='hex'
 ```
 
 
-
-
-    <seaborn.axisgrid.JointGrid at 0x7fd1e6e124c0>
-
-
-
-
-![png](Linear%20Regression%20Project_files/Linear%20Regression%20Project_10_1.png)
+<img src="{{ site.url }}{{ site.baseurl }}/images/Linear_regression/Jointgrid3_LinearReg.png" alt="Pair Plot">
 
 
 
@@ -297,14 +271,9 @@ sns.lmplot(x='Length of Membership',y='Yearly Amount Spent', data = customers)
 ```
 
 
+<img src="{{ site.url }}{{ site.baseurl }}/images/Linear_regression/Facetgrid_LinearReg.png" alt="Pair Plot">
 
 
-    <seaborn.axisgrid.FacetGrid at 0x7fd1e44f2af0>
-
-
-
-
-![png](Linear%20Regression%20Project_files/Linear%20Regression%20Project_11_1.png)
 
 
 ### Now we start training the model to predict Yearly Amount spent based on given information
@@ -382,8 +351,7 @@ plt.scatter(y_test,predictions)
 
 
 
-    <matplotlib.collections.PathCollection at 0x7fd1e6437940>
-
+<img src="{{ site.url }}{{ site.baseurl }}/images/Linear_regression/Scatter_LinearReg.png" alt="Pair Plot">
 
 
 
@@ -417,14 +385,8 @@ sns.distplot(y_test-predictions,bins=30)
 ```
 
 
+<img src="{{ site.url }}{{ site.baseurl }}/images/Linear_regression/Distplot_LinearReg.png" alt="Pair Plot">
 
-
-    <matplotlib.axes._subplots.AxesSubplot at 0x7fd1e7775490>
-
-
-
-
-![png](Linear%20Regression%20Project_files/Linear%20Regression%20Project_23_1.png)
 
 
 *Check the correlation with coefficients seen before*
