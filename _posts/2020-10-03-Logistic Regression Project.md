@@ -10,7 +10,7 @@ mathjax: "true"
 
 
 ### Objective: To figure out if a user clicked on an advertisement and predict whether or not they will click on an ad based off the features of that user.
-Source: Python for Data Science and Machine Learning Bootcamp on Udemy
+Source: Python for Data Science and Machine Learning Bootcamp on Udemy  
 Data used in the below analysis: [link](https://github.com/Vanya-16/DataSets/blob/master/advertising.csv)
 
 ```python
@@ -255,7 +255,7 @@ sns.jointplot(x='Age',y='Area Income',data=ad_data)
 ```
 
 
-<img src="{{ site.url }}{{ site.baseurl }}/images/Logistic_regression/jointplot1_LogReg.png" alt="Age vs Area Income plot">
+<img src="{{ site.url }}{{ site.baseurl }}/images/Logistic_regression/Jointplot1_LogReg.png" alt="Age vs Area Income plot">
 
 
 
