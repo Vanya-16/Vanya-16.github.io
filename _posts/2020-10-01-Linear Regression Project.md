@@ -1,6 +1,6 @@
 ---
 title: "Basics : Linear Regression"
-date: 2020-05-28
+date: 2020-10-01
 tags: [data science, linear regression]
 header:
   #image: "/images/perceptron/percept.jpg"
@@ -9,7 +9,7 @@ mathjax: "true"
 ---
 
 
-### Objective: Given the customer data of a company, whether it should focus on their website or mobile app experience.
+### Objective: Given the customer data of a company, whether it should focus on their website or mobile app experience to increase sales.
 Source: Python for Data Science and Machine Learning Bootcamp on Udemy  
 Data used in the below analysis: [link](https://github.com/Vanya-16/DataSets/blob/master/Ecommerce%20Customers)
 
