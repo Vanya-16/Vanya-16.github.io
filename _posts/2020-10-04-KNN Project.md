@@ -270,7 +270,7 @@ knn_data_scaled.head() #check the head to see if scaling worked
 
 
 
-_We can see that the data is now in a more standard and has closer values as compared to huge values in the initial dataset_
+_We can see that the data is now in a standard scale and has closer values as compared to huge values in the initial dataset_
 
 ### Split the data into train and test
 
@@ -373,7 +373,7 @@ plt.title('Error rate vs K Value')
 
 
 
-<img src="{{ site.url }}{{ site.baseurl }}/images/KNN/errorvsK_knn.png" alt="Error vs Mean error">
+<img src="{{ site.url }}{{ site.baseurl }}/images/KNN/errorvsK_Knn.png" alt="Error vs Mean error">
 
 
 ### Retraining the data with the better K Value as per the plot above
