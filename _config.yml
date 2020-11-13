@@ -62,7 +62,7 @@ naver_site_verification  :
 
 # Social Sharing
 twitter:
-  username               :"@Vanyasahu"
+  username               :
 facebook:
   username               :
   app_id                 :
@@ -95,7 +95,7 @@ author:
   codepen          :
   dribbble         :
   flickr           :
-  facebook         :
+  facebook         :"https://www.facebook.com/versatilevanya.sahu"
   foursquare       :
   github           : "Vanya-16"
   gitlab           :
@@ -109,7 +109,7 @@ author:
   stackoverflow    : # "123456/username" (the last part of your profile url, e.g. https://stackoverflow.com/users/123456/username)
   steam            : # "steamId" (the last part of your profile url, e.g. https://steamcommunity.com/id/steamId/)
   tumblr           :
-  twitter          :"@Vanyasahu"
+  twitter          :
   vine             :
   weibo            :
   xing             :
