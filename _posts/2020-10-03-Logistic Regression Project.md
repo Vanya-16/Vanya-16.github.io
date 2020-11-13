@@ -1,7 +1,7 @@
 ---
 title: "Basics : Logistic Regression"
 date: 2020-10-03
-tags: [data science, logistic regression]
+tags: [data science, logistic regression, machine learning algorithms]
 header:
   #image: "/images/perceptron/percept.jpg"
 excerpt: "Data Science, logistic regression, matplotlib, seaborn"

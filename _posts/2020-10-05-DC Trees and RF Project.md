@@ -6,7 +6,7 @@ excerpt: "Data Science, decision trees, random forest, matplotlib, seaborn, mach
 mathjax: "true"
 ---
 
-### Given the publicly available data from LendingClub.com, we will use lending data from 2007-2010 and try to classify and predict whether or not the borrower paid back their loan in full.
+### Objective: Given the publicly available data from LendingClub.com, we will use lending data from 2007-2010 and try to classify and predict whether or not the borrower paid back their loan in full.
 Source: Python for Data Science and Machine Learning Bootcamp on Udemy  
 Data used in the below analysis: [link](https://github.com/Vanya-16/DataSets/blob/master/loan_data.csv)
 
