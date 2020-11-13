@@ -62,9 +62,9 @@ naver_site_verification  :
 
 # Social Sharing
 twitter:
-  username               :
+  username               :"@Vanyasahu"
 facebook:
-  username               :
+  username               :"versatilevanya.sahu"
   app_id                 :
   publisher              :
 og_image                 : # Open Graph/Twitter default site image
@@ -95,7 +95,7 @@ author:
   codepen          :
   dribbble         :
   flickr           :
-  facebook         :"versatilevanya.sahu"
+  facebook         :
   foursquare       :
   github           : "Vanya-16"
   gitlab           :
@@ -183,7 +183,7 @@ sass:
 permalink: /:categories/:title/
 paginate: 5 # amount of posts to show
 paginate_path: /page:num/
-timezone: # https://en.wikipedia.org/wiki/List_of_tz_database_time_zones
+timezone: Asia/Calcutta # https://en.wikipedia.org/wiki/List_of_tz_database_time_zones
 
 
 # Plugins (previously gems:)
