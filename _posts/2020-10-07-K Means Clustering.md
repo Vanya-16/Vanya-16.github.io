@@ -415,7 +415,7 @@ sns.lmplot(x='Outstate',y='F.Undergrad',data=college_data,hue='Private',fit_reg=
 
 
 
-<img src="{{ site.url }}{{ site.baseurl }}/images/Kmeans/lmplot_Kmeans.png" alt="Outstate vs Undergrad">
+<img src="{{ site.url }}{{ site.baseurl }}/images/KMeans/lmplot_Kmeans.png" alt="Outstate vs Undergrad">
 
 
 
