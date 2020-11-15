@@ -8,7 +8,7 @@ mathjax: "true"
 
 
 ### Objective: Given the data for some Universities, we need to cluster them into Public or Private Universities.
-Source: [Udemy](https://www.udemy.com/course/python-for-data-science-and-machine-learning-bootcamp/) <b> <font size = 5> Python for Data Science and Machine Learning Bootcamp </font> </b>  
+Source: [Udemy](https://www.udemy.com/course/python-for-data-science-and-machine-learning-bootcamp/) <b> <font size = 3> "Python for Data Science and Machine Learning Bootcamp" </font> </b>  
 Data used in the below analysis: [link](https://github.com/Vanya-16/DataSets/blob/master/College_Data)
 
 
