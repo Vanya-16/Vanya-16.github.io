@@ -404,7 +404,7 @@ plt.ylabel('Grad.Rate')
 ```
 
 
-<img src="{{ site.url }}{{ site.baseurl }}/images/Kmeans/scatter_Kmeans.png" alt="Room Board vs Grad Rate">
+<img src="{{ site.url }}{{ site.baseurl }}/images/KMeans/scatter_Kmeans.png" alt="Room Board vs Grad Rate">
 
 
 
@@ -428,7 +428,7 @@ plt.title('Outstate for Private and Public Schools')
 
 
 
-<img src="{{ site.url }}{{ site.baseurl }}/images/Kmeans/hist_Kmeans.png" alt="Outstate for Private and Public Schools">
+<img src="{{ site.url }}{{ site.baseurl }}/images/KMeans/hist_Kmeans.png" alt="Outstate for Private and Public Schools">
 
 
 
@@ -440,7 +440,7 @@ plt.legend()
 ```
 
 
-<img src="{{ site.url }}{{ site.baseurl }}/images/Kmeans/hist2_Kmeans.png" alt="Graduation Rate for Private and Public Schools">
+<img src="{{ site.url }}{{ site.baseurl }}/images/KMeans/hist2_Kmeans.png" alt="Graduation Rate for Private and Public Schools">
 
 
 
@@ -541,7 +541,7 @@ plt.legend()
 ```
 
 
-<img src="{{ site.url }}{{ site.baseurl }}/images/Kmeans/hist2_Kmeans.png" alt="Graduation Rate for Private and Public Schools">
+<img src="{{ site.url }}{{ site.baseurl }}/images/KMeans/hist2_Kmeans.png" alt="Graduation Rate for Private and Public Schools">
 
 
 _The data above 100% graduation rate is no longer in our dataset_
