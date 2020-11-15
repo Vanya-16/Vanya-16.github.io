@@ -8,7 +8,7 @@ mathjax: "true"
 
 ### Objective: Given some "Classified Data", train the model to categorize data points.
 Source: [Udemy](https://www.udemy.com/course/python-for-data-science-and-machine-learning-bootcamp/)
-####Python for Data Science and Machine Learning Bootcamp  
+#### Python for Data Science and Machine Learning Bootcamp  
 Data used in the below analysis: [link](https://github.com/Vanya-16/DataSets/blob/master/KNN_Project_Data)
 
 ```python
