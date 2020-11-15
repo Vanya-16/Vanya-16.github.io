@@ -10,7 +10,8 @@ mathjax: "true"
 
 
 ### Objective: Given the customer data of a company, whether it should focus on their website or mobile app experience to increase sales.
-Source: [Udemy Course](https://www.udemy.com/course/python-for-data-science-and-machine-learning-bootcamp/) ####Python for Data Science and Machine Learning Bootcamp  
+Source: [Udemy](https://www.udemy.com/course/python-for-data-science-and-machine-learning-bootcamp/)
+####Python for Data Science and Machine Learning Bootcamp  
 Data used in the below analysis: [link](https://github.com/Vanya-16/DataSets/blob/master/Ecommerce%20Customers)
 
 
