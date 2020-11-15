@@ -10,7 +10,8 @@ mathjax: "true"
 
 
 ### Objective: To figure out if a user clicked on an advertisement and predict whether or not they will click on an ad based off the features of that user.
-Source: [Udemy Course](https://www.udemy.com/course/python-for-data-science-and-machine-learning-bootcamp/) ####Python for Data Science and Machine Learning Bootcamp  
+Source: [Udemy](https://www.udemy.com/course/python-for-data-science-and-machine-learning-bootcamp/)
+####Python for Data Science and Machine Learning Bootcamp  
 Data used in the below analysis: [link](https://github.com/Vanya-16/DataSets/blob/master/advertising.csv)
 
 ```python
