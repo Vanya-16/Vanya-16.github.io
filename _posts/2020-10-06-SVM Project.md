@@ -8,8 +8,7 @@ mathjax: "true"
 
 
 ### Objective: Apply SVM (Support Vector Machines) to the popular Iris dataset and classify the flowers on the basis of their features.
-Source: [Udemy](https://www.udemy.com/course/python-for-data-science-and-machine-learning-bootcamp/)
-#### Python for Data Science and Machine Learning Bootcamp  
+[Source:](https://www.udemy.com/course/python-for-data-science-and-machine-learning-bootcamp/) Udemy | Python for Data Science and Machine Learning Bootcamp    
 
 
 ```python
