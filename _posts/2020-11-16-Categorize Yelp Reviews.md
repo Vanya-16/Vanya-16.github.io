@@ -1,12 +1,12 @@
 ---
 title: "Categorize Yelp Reviews"
-date: 2020-10-10
+date: 2020-11-16
 tags: [data science, machine learning algorithms, naive bayes, svm, nlp]
 excerpt: "Data Science, Natural Language Processing, machine learning algorithms"
 mathjax: "true"
 ---
 
-### Objective: Given the Yelp reviews dataset, classify the reviews into 1 star or 5 star categories based off the text content in the reviews
+### Objective: Given the Yelp reviews dataset, classify the reviews into 1 star or 5 star categories based off the text content in the reviews.
 [Source:](https://www.udemy.com/course/python-for-data-science-and-machine-learning-bootcamp/) Udemy | Python for Data Science and Machine Learning Bootcamp  
 Data used in the below analysis: [Yelp Review Data Set from Kaggle](https://www.kaggle.com/c/yelp-recsys-2013).
 
