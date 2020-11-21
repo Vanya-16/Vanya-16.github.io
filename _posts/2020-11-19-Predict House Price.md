@@ -1377,6 +1377,7 @@ from tensorflow.keras.layers import Dense
 from tensorflow.keras.optimizers import Adam
 ```
 
+_Creating a Sequential model with activation function as rectified linear, and a dense network where every neuron is connected to every other neuron. Also, the loss function used is Mean Squared Error and Adam is used as a gradient descent optimizer._
 
 ```python
 model = Sequential()
@@ -1576,7 +1577,7 @@ losses.plot()
 <img src="{{ site.url }}{{ site.baseurl }}/images/House Predictions/plot4_keras.png">
 
 
-_The new model shows some spikes in the val_loss which means its overfitting at a few places._
+_The new model shows some spikes in the val_loss which means its overfitting at a few places. We'll ignore them for now_
 
 
 ```python
