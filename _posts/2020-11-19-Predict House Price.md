@@ -1648,8 +1648,3 @@ _The error in prediction has also reduced from before_
 ### Result: We were able to create a model and predict house prices post feature engineering and were also able to improve the error rate from 19% to 14.5%.  
 #### Our model is not great at predicting the outliers but can moslty predict values in the most common range.  
 #### The ability to explain variance has also increased from 80% to 84%.
-
-
-```python
-
-```
