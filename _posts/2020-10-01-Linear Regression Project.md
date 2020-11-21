@@ -443,7 +443,7 @@ Coeff
 
 
 
-*The above data signify that 1 change in Avg. Session Length will read to 25.98 change in Yearly Amount Spent.*  
+*The above data signify that 1 change in Avg. Session Length will lead to 25.98 change in Yearly Amount Spent.*  
 *Similarly, for Time on App, Time on Website and Length of Membership*  
 *As predicted before, the most impact if from Length of Membership*
 
