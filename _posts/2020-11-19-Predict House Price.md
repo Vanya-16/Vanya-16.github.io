@@ -6,7 +6,6 @@ excerpt: "Data Science, Deep Learning, Neural Network"
 mathjax: "true"
 ---
 
-
 ### Objective: To determine the price of the house using deep neural network. We've been provided with historical data and fetaures of the house.  
 [Source:](https://www.udemy.com/course/python-for-data-science-and-machine-learning-bootcamp/) Udemy | Python for Data Science and Machine Learning Bootcamp  
 Data used in the below analysis: [Housing data from Kaggle](https://www.kaggle.com/harlfoxem/housesalesprediction).
@@ -520,9 +519,7 @@ plt.figure(figsize=(12,8))
 sns.distplot(data['price'])
 ```
 
-
 <img src="{{ site.url }}{{ site.baseurl }}/images/House Predictions/dist1_keras.png">
-
 
 
 _The data is mostly concentrated around 1,000,000 - 2,000,000 with few houses at 3,000,000 and even at around 7,500,000_
@@ -580,6 +577,8 @@ sns.scatterplot(x='price',y='sqft_living',data=data)
 ```
 
 
+
+
 <img src="{{ site.url }}{{ site.baseurl }}/images/House Predictions/scatter1_keras.png">
 
 
@@ -591,6 +590,7 @@ sns.boxplot(x='bedrooms',y='price',data=data)
 ```
 
 
+
 <img src="{{ site.url }}{{ site.baseurl }}/images/House Predictions/box_keras.png">
 
 
@@ -600,6 +600,7 @@ sns.boxplot(x='bedrooms',y='price',data=data)
 plt.figure(figsize=(12,8))
 sns.scatterplot(x='price',y='long',data=data)
 ```
+
 
 <img src="{{ site.url }}{{ site.baseurl }}/images/House Predictions/scatter2_keras.png">
 
@@ -625,6 +626,7 @@ sns.scatterplot(x='long',y='lat',data=data,hue='price')
 
 
 <img src="{{ site.url }}{{ site.baseurl }}/images/House Predictions/scatter4_keras.png">
+
 
 
 _We can clean data to get a better plot of house prices_
@@ -1194,6 +1196,7 @@ sns.scatterplot(x='long',y='lat',data=non_top_1_percent,
 ```
 
 
+
 <img src="{{ site.url }}{{ site.baseurl }}/images/House Predictions/scatter5_keras.png">
 
 
@@ -1241,8 +1244,6 @@ sns.boxplot(x='month',y='price',data=data)
 ```python
 data.groupby(by='month').mean()['price'].plot()
 ```
-
-
 <img src="{{ site.url }}{{ site.baseurl }}/images/House Predictions/plot1_keras.png">
 
 
@@ -1251,7 +1252,6 @@ data.groupby(by='month').mean()['price'].plot()
 #price vs year
 data.groupby(by='year').mean()['price'].plot()
 ```
-
 
 <img src="{{ site.url }}{{ site.baseurl }}/images/House Predictions/plot2_keras.png">
 
@@ -1398,24 +1398,21 @@ model.fit(x=Xtrain,y=ytrain,
 ```
 
     Epoch 1/400
-    119/119 [==============================] - 0s 2ms/step - loss: 430241349632.0000 - val_loss: 418922692608.0000
+    119/119 [==============================] - 0s 3ms/step - loss: 430242594816.0000 - val_loss: 418922102784.0000
     Epoch 2/400
-    119/119 [==============================] - 0s 1ms/step - loss: 429360381952.0000 - val_loss: 415949946880.0000
+    119/119 [==============================] - 0s 2ms/step - loss: 428868403200.0000 - val_loss: 413837787136.0000
     Epoch 3/400
-    119/119 [==============================] - 0s 1ms/step - loss: 417961672704.0000 - val_loss: 390411911168.0000
+    119/119 [==============================] - 0s 2ms/step - loss: 407161012224.0000 - val_loss: 363431297024.0000
     Epoch 4/400
-    119/119 [==============================] - 0s 1ms/step - loss: 362967072768.0000 - val_loss: 298817191936.0000
+    119/119 [==============================] - 0s 2ms/step - loss: 303796158464.0000 - val_loss: 206461501440.0000
     Epoch 5/400
-    119/119 [==============================] - 0s 1ms/step - loss: 234846666752.0000 - val_loss: 154322370560.0000
-    Epoch 6/400
-    119/119 [==============================] - 0s 1ms/step - loss: 121333202944.0000 - val_loss: 97280843776.0000
-    Epoch 7/400
-    119/119 [==============================] - 0s 1ms/step - loss: 98753257472.0000 - val_loss: 94313840640.0000
+    119/119 [==============================] - 0s 2ms/step - loss: 143996928000.0000 - val_loss: 98603425792.0000
     .
     .
     .
     Epoch 400/400
-    119/119 [==============================] - 0s 2ms/step - loss: 29929684992.0000 - val_loss: 27626838016.0000
+    119/119 [==============================] - 0s 2ms/step - loss: 29113778176.0000 - val_loss: 26656872448.0000
+
 
 
 
@@ -1431,12 +1428,11 @@ losses = pd.DataFrame(model.history.history)
 losses.plot()
 ```
 
-
-
 <img src="{{ site.url }}{{ site.baseurl }}/images/House Predictions/plot3_keras.png">
 
 
-_Expected behaviour of our model with loss vs Val_loss. We can train at more epochs as loss is still over val_loss and it's not yet overfitting_
+
+_Expected behaviour of our model with loss vs Val_loss. We can train at more epochs as loss is still over val_loss and it's not overfitting yet_
 
 ### Evaluating the model performance
 
@@ -1457,9 +1453,9 @@ print("Mean_squared_error:",  mean_squared_error(ytest,predictions))
 print("Root_Mean_Squared_error:", np.sqrt(mean_squared_error(ytest,predictions)))
 ```
 
-    Mean_absolute_error: 103103.7446638696
-    Mean_squared_error: 27626834030.167973
-    Root_Mean_Squared_error: 166213.2185783308
+    Mean_absolute_error: 101612.238435571
+    Mean_squared_error: 26656866746.557117
+    Root_Mean_Squared_error: 163269.30742352377
 
 
 
@@ -1474,7 +1470,7 @@ data['price'].describe()['mean'] #checking the mean price
 
 
 
-_Our model is off by about 19.08% (Mean absolute error) of the mean value of price. It is not too bad but not great as such_
+_Our model is off by about 19% (Mean absolute error) of the mean value of price. It is not too bad but not great as such_
 
 
 ```python
@@ -1486,7 +1482,7 @@ explained_variance_score(ytest,predictions)
 
 
 
-    0.7918666773104263
+    0.799128091503277
 
 
 
@@ -1498,9 +1494,7 @@ plt.scatter(ytest,predictions)
 plt.plot(ytest,ytest,'r')
 ```
 
-
 <img src="{{ site.url }}{{ site.baseurl }}/images/House Predictions/scatter6_keras.png">
-
 
 _The plot of predicted vs true values seem fine except for some outliers_
 
@@ -1521,7 +1515,7 @@ single_house = scale.transform(single_house.values.reshape(-1, 19)) #transform t
 print("Error:", abs(data.iloc[0]['price']-model.predict(single_house)[0][0]))
 ```
 
-    Error: 58779.65625
+    Error: 63496.40625
 
 
 _We can try to reduce error on the current rendered model by removing outliers and by increasing the epochs. We'll try  with removing outliers._
@@ -1557,21 +1551,20 @@ model.fit(x=Xtrain,y=ytrain,
 ```
 
     Epoch 1/400
-    117/117 [==============================] - 0s 2ms/step - loss: 25183025152.0000 - val_loss: 23184056320.0000
+    117/117 [==============================] - 0s 3ms/step - loss: 24656377856.0000 - val_loss: 22707032064.0000
     Epoch 2/400
-    117/117 [==============================] - 0s 2ms/step - loss: 21834297344.0000 - val_loss: 22692438016.0000
+    117/117 [==============================] - 0s 2ms/step - loss: 21469505536.0000 - val_loss: 21987682304.0000
     Epoch 3/400
-    117/117 [==============================] - 0s 2ms/step - loss: 21505099776.0000 - val_loss: 22398056448.0000
+    117/117 [==============================] - 0s 2ms/step - loss: 21053581312.0000 - val_loss: 21625681920.0000
     Epoch 4/400
-    117/117 [==============================] - 0s 2ms/step - loss: 21330776064.0000 - val_loss: 22338795520.0000
+    117/117 [==============================] - 0s 2ms/step - loss: 20826849280.0000 - val_loss: 21429176320.0000
     Epoch 5/400
-    117/117 [==============================] - 0s 2ms/step - loss: 21221902336.0000 - val_loss: 22094151680.0000
+    117/117 [==============================] - 0s 3ms/step - loss: 20693381120.0000 - val_loss: 21351958528.0000
     .
     .
     .
     Epoch 400/400
-    117/117 [==============================] - 0s 2ms/step - loss: 13105951744.0000 - val_loss: 13929935872.0000
-
+    117/117 [==============================] - 0s 2ms/step - loss: 12499646464.0000 - val_loss: 13185313792.0000
 
 
 
@@ -1583,7 +1576,7 @@ losses.plot()
 <img src="{{ site.url }}{{ site.baseurl }}/images/House Predictions/plot4_keras.png">
 
 
-_The new model shows some spikes in the val_loss which means its overfitting at a few places. We'll ignore this for now._
+_The new model shows some spikes in the val_loss which means its overfitting at a few places._
 
 
 ```python
@@ -1595,18 +1588,18 @@ predictions = model.predict(Xtest)
 print("Mean_absolute_error:", mean_absolute_error(ytest,predictions))
 print("Mean_squared_error:",  mean_squared_error(ytest,predictions))
 print("Root_Mean_Squared_error:", np.sqrt(mean_squared_error(ytest,predictions)))
-data['price'].describe()['mean']
+non_top_1_percent['price'].describe()['mean']
 ```
 
-    Mean_absolute_error: 79021.48011009353
-    Mean_squared_error: 13929933365.425364
-    Root_Mean_Squared_error: 118025.1387011486
+    Mean_absolute_error: 75475.24519924006
+    Mean_squared_error: 13185316548.521532
+    Root_Mean_Squared_error: 114827.33362976575
 
 
 
 
 
-    540296.5735055795
+    518367.48037977645
 
 
 
@@ -1618,7 +1611,7 @@ explained_variance_score(ytest,predictions)
 
 
 
-    0.8321614513919094
+    0.8400017690813121
 
 
 
@@ -1630,10 +1623,32 @@ plt.scatter(ytest,predictions)
 plt.plot(ytest,ytest,'r')
 ```
 
+
+
 <img src="{{ site.url }}{{ site.baseurl }}/images/House Predictions/scatter7_keras.png">
 
 
 
-### Result: We were able to create a model and predict house prices post feature engineering and were also able to improve the error rate from 19% to 14.6%.  
+```python
+single_house = data.drop('price',axis=1).iloc[0]
+single_house = scale.transform(single_house.values.reshape(-1, 19))
+```
+
+
+```python
+print("Error:", abs(data.iloc[0]['price']-model.predict(single_house)[0][0]))
+```
+
+    Error: 39714.4375
+
+
+_The error in prediction has also reduced from before_
+
+### Result: We were able to create a model and predict house prices post feature engineering and were also able to improve the error rate from 19% to 14.5%.  
 #### Our model is not great at predicting the outliers but can moslty predict values in the most common range.  
-#### The ability to explain variance has also increased from 79% to 83%.
+#### The ability to explain variance has also increased from 80% to 84%.
+
+
+```python
+
+```
