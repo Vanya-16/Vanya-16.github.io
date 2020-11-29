@@ -1780,7 +1780,7 @@ df.isnull().sum()/df.shape[0]
 
 
 
-_As the data covered by revol_util and pub_rec_bankruptcies account for less than 0.5% of the data, we'll drop these._
+_As the data covered by revol_util and pub_rec_bankruptcies account for less than 0.05% of the data, we'll drop these._
 
 
 ```python
@@ -2183,7 +2183,7 @@ X_train.shape
     (316824, 76)
 
 
-_We are creating a Sequential Model, with activation function as Rectified Linear Unit, with a Dropout layer of 20% neurones switching off, sigmoid function as activation for output. Since its a binary classification problem, we are using Binary Cross-Entropy as loss function and Adam as optimizer._
+_We are creating a Sequential Model, with activation function as Rectified Linear Unit, with a Dropout layer of 20% neurons switching off, sigmoid function as activation for output. Since its a binary classification problem, we are using Binary Cross-Entropy as loss function and Adam as optimizer._
 
 ```python
 model = Sequential()
@@ -2224,13 +2224,6 @@ model.fit(X_train,y_train,batch_size=256,epochs=50,validation_data=(X_test,y_tes
     .
     Epoch 50/50
     1238/1238 [==============================] - 3s 2ms/step - loss: 0.2549 - val_loss: 0.2575
-
-
-
-
-
-    <tensorflow.python.keras.callbacks.History at 0x7ff31fbf8130>
-
 
 
 
@@ -2293,13 +2286,6 @@ n_model.fit(X_train,y_train,batch_size=256,epochs=50,validation_data=(X_test,y_t
     Epoch 21/50
     1238/1238 [==============================] - 3s 2ms/step - loss: 0.2580 - val_loss: 0.2587
     Epoch 00021: early stopping
-
-
-
-
-
-    <tensorflow.python.keras.callbacks.History at 0x7ff2fe632940>
-
 
 
 
@@ -2403,5 +2389,5 @@ dummy_df.iloc[random_ind]['loan_repaid']
 
 
 ### Result: We were able to pre-process our data, do some feature engineering and create a model that predicts whether a loan would get repaid or not with an accuracy of 89%.  
-#### A mentioned before, due to unbalanced data, out true metric evaluation is ideally given by the F1 score of parametric with less values, i.e. 0. Here, it is 61%.  
-#### Whether it is bad or not depends on the metric and the actual business requirement of the model we created. Given the skewed data, this is still pretty good.
+#### As mentioned before, due to unbalanced data, out true metric evaluation is ideally given by the F1 score of parametric with less values, i.e. 0. Here, it is 61%.  
+#### Whether it is good or not depends on the metric and the actual business requirement of the model we created. Given the skewed data, this is still pretty good.
