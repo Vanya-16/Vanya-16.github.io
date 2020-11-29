@@ -1,7 +1,7 @@
 ---
 title: "Basics : Linear Regression"
 date: 2020-10-01
-tags: [data science, linear regression, machine learning algorithms]
+tags: [data science, linear regression, machine learning algorithms, regression]
 header:
   #image: "/images/perceptron/percept.jpg"
 excerpt: "Data Science, linear regression, matplotlib, seaborn"

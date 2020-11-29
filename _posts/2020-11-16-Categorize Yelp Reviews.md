@@ -1,7 +1,7 @@
 ---
 title: "Categorize Yelp Reviews"
 date: 2020-11-16
-tags: [data science, machine learning algorithms, naive bayes, svm, nlp]
+tags: [data science, machine learning algorithms, naive bayes, svm, nlp, classification]
 excerpt: "Data Science, Natural Language Processing, machine learning algorithms"
 mathjax: "true"
 ---

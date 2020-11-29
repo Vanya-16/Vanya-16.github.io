@@ -1,7 +1,7 @@
 ---
 title: "Basics : Decison Trees and Random Forest"
 date: 2020-10-05
-tags: [data science, decision trees, random forest, machine learning algorithms]
+tags: [data science, decision trees, random forest, machine learning algorithms, classification]
 excerpt: "Data Science, decision trees, random forest, matplotlib, seaborn, machine learning algorithms"
 mathjax: "true"
 ---
