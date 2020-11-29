@@ -1,7 +1,7 @@
 ---
 title: "Predict House price"
 date: 2020-11-19
-tags: [data science, deep learning, linear regression, neural network ]
+tags: [data science, deep learning, regression, neural network ]
 excerpt: "Data Science, Deep Learning, Neural Network"
 mathjax: "true"
 ---
@@ -1577,7 +1577,7 @@ losses.plot()
 <img src="{{ site.url }}{{ site.baseurl }}/images/House Predictions/plot4_keras.png">
 
 
-_The new model shows some spikes in the val_loss which means its overfitting at a few places. We'll ignore them for now_
+_The new model shows some spikes in the val_loss which means its overfitting at 400 epochs. We'll ignore them for now_
 
 
 ```python
