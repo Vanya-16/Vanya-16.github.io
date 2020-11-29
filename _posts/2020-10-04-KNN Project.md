@@ -1,7 +1,7 @@
 ---
 title: "Basics : K-Nearest Neighbors"
 date: 2020-10-04
-tags: [data science, KNN, K nearest neighbors, machine learning algorithms]
+tags: [data science, KNN, K nearest neighbors, machine learning algorithms, classification]
 excerpt: "Data Science, KNN, matplotlib, seaborn, StandardScaler, K nearest neighbors"
 mathjax: "true"
 ---

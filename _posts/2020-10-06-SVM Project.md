@@ -1,7 +1,7 @@
 ---
 title: "Basics : Support Vector Machines"
 date: 2020-10-06
-tags: [data science, svm, iris dataset, grid search, machine learning algorithms]
+tags: [data science, svm, iris dataset, grid search, machine learning algorithms, classification]
 excerpt: "Data Science, Support Vector Machines, Matplotlib, Seaborn"
 mathjax: "true"
 ---
