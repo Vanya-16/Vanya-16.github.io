@@ -443,7 +443,6 @@ _Outliers are present which need to be treated as a part of pre-processing._
 
 
 ```python
-
 sns.jointplot(x='Budget',y='Collection',data=movies_data)
 ```
 
