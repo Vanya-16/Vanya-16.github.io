@@ -1661,7 +1661,9 @@ map_clusters
 ```
 
 <img src="{{ site.url }}{{ site.baseurl }}/images/Cluster_neighbourhoods/Clusters1.jpeg">
+<br>
 <img src="{{ site.url }}{{ site.baseurl }}/images/Cluster_neighbourhoods/Clusters2.jpeg">
+<br>
 <img src="{{ site.url }}{{ site.baseurl }}/images/Cluster_neighbourhoods/Clusters3.jpeg">
 
 
