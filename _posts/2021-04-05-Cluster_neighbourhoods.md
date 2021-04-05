@@ -3261,4 +3261,4 @@ Final_venues_sorted
 
 ### Result: We were able to identify 9 closest neighbourhoods in New York City which are ideal to open up our new restaurant and expand our business.
 #### There are a few things than can be further developed, like a better value of "k" since elbow method didn't provide a clear option. We could use Average silhouette method or Gap statistic method in order to do so.
-#### The final decision needs to be made basis a lot more information like availability of space, taxes involved, easy of transportation etc.
+#### The final decision needs to be made basis a lot more information like availability of space, taxes involved, ease of transportation etc.
