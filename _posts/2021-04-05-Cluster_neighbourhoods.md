@@ -1660,9 +1660,9 @@ for lat, lon, poi, cluster in zip(NY_clustered['Latitude'], NY_clustered['Longit
 map_clusters
 ```
 
-<img src="{{ site.url }}{{ site.baseurl }}/images/Cluster_neighbourhoods/Cluster1.jpeg">
-<img src="{{ site.url }}{{ site.baseurl }}/images/Cluster_neighbourhoods/Cluster2.jpeg">
-<img src="{{ site.url }}{{ site.baseurl }}/images/Cluster_neighbourhoods/Cluster3.jpeg">
+<img src="{{ site.url }}{{ site.baseurl }}/images/Cluster_neighbourhoods/Clusters1.jpeg">
+<img src="{{ site.url }}{{ site.baseurl }}/images/Cluster_neighbourhoods/Clusters2.jpeg">
+<img src="{{ site.url }}{{ site.baseurl }}/images/Cluster_neighbourhoods/Clusters3.jpeg">
 
 
 #### Getting the cluster for our current restaurant
