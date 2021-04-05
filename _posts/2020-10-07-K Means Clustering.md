@@ -1,7 +1,7 @@
 ---
 title: "Basics : K Means Clustering"
 date: 2020-10-07
-tags: [data science, clustering, machine learning algorithms, unsupervised learning, classification]
+tags: [data science, clustering, machine learning algorithms, unsupervised learning, classification, kmeans]
 excerpt: "Data Science, k means, machine learning algorithms, unsupervised"
 mathjax: "true"
 ---
